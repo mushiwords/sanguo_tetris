@@ -1,0 +1,55 @@
+<view class="page" catchtouchmove="noop">
+  <view class="topbar">
+    <view class="stat">
+      <view class="stat-label">战功</view>
+      <view class="stat-value">{{score}}</view>
+    </view>
+    <view class="stat">
+      <view class="stat-label">斩敌</view>
+      <view class="stat-value">{{lines}}</view>
+    </view>
+    <view class="stat">
+      <view class="stat-label">官职</view>
+      <view class="stat-value small">{{rank}}</view>
+    </view>
+    <view class="stat">
+      <view class="stat-label">最高</view>
+      <view class="stat-value small">{{best.score}}</view>
+    </view>
+    <canvas type="2d" id="next" class="next-canvas"></canvas>
+  </view>
+
+  <view class="board-wrap">
+    <canvas type="2d" id="board" class="board-canvas" style="{{boardStyle}}"></canvas>
+  </view>
+
+  <view class="controls">
+    <block tt:if="{{state === 'playing'}}">
+      <view class="row">
+        <view class="btn" bindtouchstart="onLeftDown" bindtouchend="onLeftUp" bindtouchcancel="onLeftUp">左军</view>
+        <view class="btn accent" bindtouchstart="onRotate">挥戈</view>
+        <view class="btn" bindtouchstart="onRightDown" bindtouchend="onRightUp" bindtouchcancel="onRightUp">右军</view>
+        <view class="btn muted" bindtap="onPauseTap">安营</view>
+      </view>
+      <view class="row">
+        <view class="btn" bindtouchstart="onSoftDown" bindtouchend="onSoftUp" bindtouchcancel="onSoftUp">疾行 · 按住</view>
+        <view class="btn danger" bindtouchstart="onHardDrop">斩 · 直落</view>
+      </view>
+    </block>
+    <block tt:if="{{state === 'start'}}">
+      <view class="btn primary big" bindtap="onStart">点 将 出 征</view>
+    </block>
+    <block tt:if="{{state === 'paused'}}">
+      <view class="row">
+        <view class="btn primary" bindtap="onResume">继续出征</view>
+        <view class="btn" bindtap="onRestart">重整旗鼓</view>
+      </view>
+    </block>
+    <block tt:if="{{state === 'over'}}">
+      <view class="row">
+        <view class="btn primary" bindtap="onRestart">再 战</view>
+        <view class="btn" bindtap="onBackHome">收兵回营</view>
+      </view>
+    </block>
+  </view>
+</view>

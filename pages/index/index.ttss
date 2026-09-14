@@ -1,0 +1,122 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(180deg, #1c150d 0%, #14100b 100%);
+  padding: 8px 0;
+  box-sizing: border-box;
+}
+
+.topbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 92%;
+  padding: 6px 10px;
+  box-sizing: border-box;
+  background: rgba(212, 175, 110, 0.08);
+  border: 1px solid rgba(212, 175, 110, 0.25);
+  border-radius: 8px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 50px;
+}
+
+.stat-label {
+  font-size: 10px;
+  color: #9c8659;
+  letter-spacing: 2px;
+}
+
+.stat-value {
+  font-size: 18px;
+  color: #f5dfae;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+.stat-value.small {
+  font-size: 13px;
+}
+
+.next-canvas {
+  width: 56px;
+  height: 56px;
+}
+
+.board-wrap {
+  margin-top: 8px;
+  position: relative;
+}
+
+.board-canvas {
+  background: #16110b;
+  border-radius: 4px;
+}
+
+.controls {
+  margin-top: 10px;
+  width: 92%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.btn {
+  flex: 1;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(212, 175, 110, 0.12);
+  border: 1px solid rgba(212, 175, 110, 0.35);
+  border-radius: 10px;
+  color: #f5dfae;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.btn + .btn {
+  margin-left: 10px;
+}
+
+.btn.accent {
+  background: rgba(74, 168, 122, 0.15);
+  border-color: rgba(74, 168, 122, 0.5);
+}
+
+.btn.danger {
+  background: rgba(221, 90, 78, 0.15);
+  border-color: rgba(221, 90, 78, 0.5);
+  color: #f0b1a8;
+}
+
+.btn.muted {
+  background: rgba(212, 175, 110, 0.06);
+  border-color: rgba(212, 175, 110, 0.2);
+  color: #b9a37a;
+}
+
+.btn.primary {
+  background: linear-gradient(180deg, #a3261d, #7c1a13);
+  border-color: #e0b13e;
+  color: #ffe9b8;
+  font-weight: bold;
+}
+
+.btn.big {
+  height: 64px;
+  font-size: 20px;
+  letter-spacing: 6px;
+}

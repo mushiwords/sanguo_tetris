@@ -1,0 +1,10 @@
+{
+  "pages": ["pages/index/index"],
+  "window": {
+    "navigationBarTitleText": "三国方块",
+    "navigationBarBackgroundColor": "#14100b",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#14100b",
+    "backgroundTextStyle": "dark"
+  }
+}

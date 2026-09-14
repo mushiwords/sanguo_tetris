@@ -1,0 +1,8 @@
+{
+  "projectname": "sanguo-tetris",
+  "appid": "",
+  "setting": {
+    "es6": true,
+    "minified": true
+  }
+}
